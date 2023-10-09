@@ -1,6 +1,8 @@
 - Create React app
 - Configured Tailwind CSS into app
-- 
+- Header
+- Sign in/Sign up form - Formik (can be used) - did own validations
+
 
 
 
