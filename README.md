@@ -2,9 +2,15 @@
 - Configured Tailwind CSS into app
 - Header
 - Sign in/Sign up form - Formik (can be used) - did own validations
+    - useRef hook
+    - form validation
+- Firebase Setup and app deployment
+- Create sign up user account in firebase
+- Implement Sign in / sign out user api
+- Redux store setup - userSlice
+- Update profile api call
 
-
-
+- Fetch movies from tMDB
 
 # Features
 - Login/Sign Up page
