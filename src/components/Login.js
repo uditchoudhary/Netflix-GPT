@@ -6,15 +6,14 @@ import {
   signInWithEmailAndPassword,
 } from "firebase/auth";
 import { auth } from "../utils/firebase";
-import { useNavigate } from "react-router-dom";
 import { updateProfile } from "firebase/auth";
 import { useDispatch } from "react-redux";
 import { addUser } from "../utils/userSlice";
+import { NETFLIX_BG, USER_AVATAR } from "../utils/constants";
 
 const Login = () => {
   const [isSignInForm, setIsSignInForm] = useState(true);
   const [errorMessage, setErrorMessage] = useState(null);
-  const navigate = useNavigate();
   const email = useRef(null);
   const password = useRef(null);
   const fullName = useRef(null);
@@ -40,7 +39,7 @@ const Login = () => {
           const user = userCredential.user;
           updateProfile(auth.currentUser, {
             displayName: fullName.current.value,
-            photoURL: "https://picsum.photos/200",
+            photoURL: USER_AVATAR,
           })
             .then(() => {
               const { uid, email, displayName, photoURL } = auth.currentUser;
@@ -52,7 +51,6 @@ const Login = () => {
                   photoURL: photoURL,
                 })
               );
-              navigate("/browse");
             })
             .catch((error) => {
               setErrorMessage(error.message);
@@ -61,8 +59,7 @@ const Login = () => {
         .catch((error) => {
           const errorCode = error.code;
           const errorMessage = error.message;
-          console.log(errorCode + ":" + errorMessage);
-          setErrorMessage(errorMessage);
+          setErrorMessage(errorCode + ":" +errorMessage);
         });
     } else {
       signInWithEmailAndPassword(
@@ -73,13 +70,11 @@ const Login = () => {
         .then((userCredential) => {
           // Signed in
           const user = userCredential.user;
-          console.log(user);
-          navigate("/browse");
         })
         .catch((error) => {
           const errorCode = error.code;
           const errorMessage = error.message;
-          setErrorMessage(errorMessage);
+          setErrorMessage(errorCode+" : "+errorMessage);
         });
     }
   };
@@ -88,7 +83,7 @@ const Login = () => {
       <Header />
       <div className="absolute">
         <img
-          src="https://assets.nflxext.com/ffe/siteui/vlv3/dc1cf82d-97c9-409f-b7c8-6ac1718946d6/2e29a2c3-8bd5-4e7d-a714-b0bdad5e2e78/NZ-en-20230911-popsignuptwoweeks-perspective_alpha_website_large.jpg"
+          src={NETFLIX_BG}
           alt="logo"
         />
       </div>

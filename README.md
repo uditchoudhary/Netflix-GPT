@@ -9,8 +9,15 @@
 - Implement Sign in / sign out user api
 - Redux store setup - userSlice
 - Update profile api call
+- unsubscribes onauthStateChange callback 
+- TMDB registration and api call to get now playing movie 
+- Fetch movies from TMDB
+- redux movieSlice and reducer
+- custom hook to get videos and update store
+- custom hook to get trailer video and update store
+- Video playback in background with Title on top - Main Container
+    - embeded youtube vide
 
-- Fetch movies from tMDB
 
 # Features
 - Login/Sign Up page
@@ -29,3 +36,13 @@
 - Netflix GPT
     - Search Bar
     - Movie Suggestion# Netflix-GPT
+
+
+
+# ENV Properties 
+.env properties:
+
+REACT_APP_TMDB_API_KEY=
+REACT_APP_TMDB_API_READ_ACCESS_TOKEN=
+REACT_APP_FIREBASE_API_KEY=
+REACT_APP_FIREBASE_MESSAGING_SENDER_ID=
