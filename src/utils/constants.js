@@ -6,3 +6,6 @@ export const NETFLIX_BG =
 
 export const USER_AVATAR =
   "https://occ-0-977-2597.1.nflxso.net/dnm/api/v6/K6hjPJd6cR6FpVELC5Pd6ovHRSk/AAAABa1ooWtQwBJCYOhUkWrWmWI_iW8jmdXEiEsw5pLlwpAPxtOuYB2ow8b8bqtBLcljHYk9O4uiN3sZoiZafPTJ18ipihQ461c.png?r=b13";
+
+  export const IMG_CDN_URL =
+    "https://image.tmdb.org/t/p/w780";

@@ -16,7 +16,9 @@
 - custom hook to get videos and update store
 - custom hook to get trailer video and update store
 - Video playback in background with Title on top - Main Container
-    - embeded youtube vide
+    - embeded youtube video
+- Build secondary components
+- Build movie list and card
 
 
 # Features
